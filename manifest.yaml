@@ -1,0 +1,30 @@
+exec: './openrtsp_ffmpeg'
+version: v0.1.0
+author: sg3des
+url: https://github.com/neirolis/openrtsp
+player: mjpeg
+
+transport: stdout
+serialize: mjpeg
+
+support:
+  addr: rtsp://
+  subaddr: rtsp://
+  archive: '*'
+  monitor: true
+
+variables:
+  - name: framerate
+    default: 5
+    label: Frame Rate
+    type: number
+  - name: quality
+    default: 3
+    label: Quality
+    type: number
+    help: 1-31, where 1 is the best quality
+  - name: desc
+    value: A special solution where receiving a video stream from an IP camera is carried out using openRTSP and decoding the stream is performed by ffmpeg
+    readonly: true
+    system: true
+    type: hidden

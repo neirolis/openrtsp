@@ -1,0 +1,13 @@
+type: modules
+name: cameras-openrtsp
+desc: A special solution where receiving a video stream from an IP camera is carried out using openRTSP and decoding the stream is performed by ffmpeg
+version: v0.1.0
+author: sg3des
+url: https://github.com/neirolis/openrtsp
+
+source: https://rtmip.info/modules/cameras-openrtsp.zip
+
+exec:
+  - mkdir -p $WD/cameras/openrtsp/
+  - cp -f $PKGDIR/* $WD/cameras/openrtsp/
+
